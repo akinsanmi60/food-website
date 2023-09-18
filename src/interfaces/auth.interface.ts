@@ -24,7 +24,7 @@ export interface IRegisterInput {
 export interface IUserDecoded {
   user_id: string;
   firstName: string;
-  lastName: string | null;
+  lastName: string;
   email: string;
   roles: string[];
   phone: string;
@@ -43,14 +43,6 @@ export type IAuthState = {
   error: string | null;
   loading: 'idle' | 'pending' | 'succeeded' | 'failed';
 };
-export interface IResponse {
-  [x: string]: any;
-  data: {
-    detail: string;
-    response: any;
-  } & IAuthData;
-  status: number;
-}
 
 export type IForgetPassword = {
   error: string | null;
